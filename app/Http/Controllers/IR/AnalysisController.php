@@ -12,12 +12,10 @@ use Illuminate\Support\Facades\Auth;
 
 class AnalysisController extends Controller
 {
-  
-     public function index(Request $request){
+    public function index(){ 
         $type = Type::where('name', 'ir_analysis')->first();
         return view('admin.irpages.analysis.index', compact(['type']));
-        
-     }
+    }
     public function editBanner(Request $request)
     {
         $type = Type::find($request->type_id);
@@ -35,11 +33,10 @@ class AnalysisController extends Controller
         return view('admin.irpages.analysis.create');
     }
     public function storeFile(Request $request){
-     
+      //  dd("Arrive Analysis");
         $fileName= ImageController::uploadTypePDF($request);
         $type = Type::where('name', 'ir_analysis')->first();
         $yearDate = Carbon::createFromFormat('Y', $request->year)->startOfYear();
-        dd($yearDate);
         $user = Auth::user();
         $post=Post::create([
              'imgname'=>$fileName,

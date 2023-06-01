@@ -169,7 +169,7 @@
         </div>
     </section>
 
-    <section class="row">
+    <!-- <section class="row">
         <div class="col-12 wrap-homeir wow fadeInDown">
             <div class="container">
                 <div class="row">
@@ -205,7 +205,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="row">
         <div class="col-12 wrap-homenews wow fadeInDown">

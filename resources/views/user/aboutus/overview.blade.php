@@ -13,7 +13,7 @@
 <section class="row">
     <div class="col-12 banner-brief banner-inside wow fadeInDown"">
         <figure><img src="{{asset('storage/types/'.$typeOverView->imgname)}}" alt=""></figure>
-        <h1>{{$typeOverView->typeTitles[0]->title_th}}</h1>
+        <h1 id="mainTitle">{{$typeOverView->typeTitles[0]->title_th}}</h1>
     </div>
 </section>
 
@@ -195,12 +195,13 @@
                    titleGroup='',subTitleGroup='',descGroup='',
                    titleOrg='',subTitleOrg='',descOrg='',
                    titleNetwork='',subTitleNetwork='',descNetwork='',
-                   titleAward='',subTitleAward='',descAward='';
+                   titleAward='',subTitleAward='',descAward='',mainTitle='';
                 if (lang === 'en') {
                  
                             titleHistory="{{$typeHistory->typeTitles[0]->title_en}}";
                             subTitleHistory="{{$typeHistory->typeTitles[0]->title_en}}";
                             descHistory="{{$typeHistory->typeContents[4]->content_en}}...";
+                            mainTitle="{{$typeOverView->typeTitles[0]->title_en}}";
 
                             titleVision="{{$typeVision->typeTitles[0]->title_en}}";
                             subTitleVision="{{$typeVision->typeTitles[0]->title_en}}";
@@ -229,6 +230,8 @@
                             titleHistory="{{$typeHistory->typeTitles[0]->title_th}}";
                             subTitleHistory="{{$typeHistory->typeTitles[0]->title_th}}";
                             descHistory="{{$typeHistory->typeContents[4]->content_th}}...";
+                            mainTitle="{{$typeOverView->typeTitles[0]->title_th}}";
+
 
                             titleVision="{{$typeVision->typeTitles[0]->title_th}}";
                             subTitleVision="{{$typeVision->typeTitles[0]->title_th}}";
@@ -258,6 +261,8 @@
                     titleHistory="{{$typeHistory->typeTitles[0]->title_ch}}";
                             subTitleHistory="{{$typeHistory->typeTitles[0]->title_ch}}";
                             descHistory="{{$typeHistory->typeContents[4]->content_ch}}...";
+                            mainTitle="{{$typeOverView->typeTitles[0]->title_ch}}";
+
 
                             titleVision="{{$typeVision->typeTitles[0]->title_ch}}";
                             subTitleVision="{{$typeVision->typeTitles[0]->title_ch}}";
@@ -305,6 +310,7 @@
                 $('#titleAward').text(titleAward);
                 $('#subTitleAward').text(subTitleAward);
                 $('#descAward').text(descAward);
+                $('#mainTitle').text(mainTitle);
 
             }
     

@@ -90,6 +90,10 @@ class BusinessController extends Controller
        
         return redirect()->route('business.update', $type->id);
     }
+
+
+
+
     public function editImage(Request $request)
     {
         ImageController::updatePostImage($request);

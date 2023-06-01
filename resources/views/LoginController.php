@@ -39,7 +39,7 @@ class LoginController extends Controller
             if (Auth::attempt($request->only(['email', 'password']))) {
                 $request->session()->regenerate();
 
-                return redirect()->route('dashboard.home')->with('msg', 'User login successfully');
+                return redirect()->route('dashboard.index')->with('msg', 'User login successfully');
             } else {
 
                 return redirect()->back()->with('msg', 'User not loged in');
